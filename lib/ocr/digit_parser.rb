@@ -9,7 +9,7 @@ module OCR
     end
 
     def parse
-      0
+      digit.include?('_') ? 0 : 1
     end
 
   end
