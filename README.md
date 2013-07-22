@@ -17,12 +17,12 @@ be blank).
 
 So, given the following example input...
 
-`
+```
     _  _     _  _  _  _  _
   | _| _||_||_ |_   ||_||_|
   ||_  _|  | _||_|  ||_| _|
 
-`
+```
 
 The output should be `123456789`.
 
