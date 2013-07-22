@@ -50,9 +50,11 @@ And any account number failing checksum validation should be followed by "ERR"
 
 So, an example of the output file might read as follows:
 
+```
 457508000
 664371495 ERR
 86110??36 ILL
+```
 
 ## Guessing illegible & invalid account numbers
 
