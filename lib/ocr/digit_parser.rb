@@ -5,7 +5,7 @@ module OCR
     attr_reader :digit
 
     def initialize(digit)
-      @digit = digit
+      @digit = sanitize(digit)
     end
 
     def parse
@@ -29,93 +29,92 @@ module OCR
       }
     end
 
+    # Helper method to strip all newline characters.
+    #
+    # digit - string to be sanitized
+    #
+    # Returns the string with all newlines removed.
+    def sanitize(digit)
+      digit.gsub(/\n+/, '')
+    end
+
     def zero
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
 | |
 |_|
-
       DIGIT
     end
 
     def one
-      <<-DIGIT
+      sanitize <<-DIGIT
   |
   |
   |
-
       DIGIT
     end
 
     def two
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
  _|
 |_ 
-
       DIGIT
     end
 
     def three
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
  _|
  _|
-
       DIGIT
     end
 
     def four
-      <<-DIGIT
+      sanitize <<-DIGIT
    
 |_|
   |
-
       DIGIT
     end
 
     def five
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
 |_ 
  _|
-
       DIGIT
     end
 
     def six
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
 |_ 
 |_|
-
       DIGIT
     end
 
     def seven
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
   |
   |
-
       DIGIT
     end
 
     def eight
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
 |_|
 |_|
-
       DIGIT
     end
 
     def nine
-      <<-DIGIT
+      sanitize <<-DIGIT
  _ 
 |_|
  _|
-
       DIGIT
     end
 
