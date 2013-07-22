@@ -10,7 +10,7 @@ describe OCR::DigitParser do
   DIGIT
 
   one = <<-DIGIT
-  |
+   
   |
   |
 

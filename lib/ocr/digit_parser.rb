@@ -48,7 +48,7 @@ module OCR
 
     def one
       sanitize <<-DIGIT
-  |
+   
   |
   |
       DIGIT
